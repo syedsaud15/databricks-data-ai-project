@@ -1,141 +1,368 @@
-# 🏗️ Databricks FMCG Data & AI Pipeline
+# ☁️ Databricks Data + AI Project
 
-> Enterprise-grade Lakehouse Data Engineering project implementing **Medallion Architecture (Bronze → Silver → Gold)** using Databricks, PySpark, Delta Lake, and SQL for an FMCG retail domain.
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0F19,25:F97316,55:EA580C,100:F59E0B&height=220&section=header&text=DATABRICKS%20DATA%20+%20AI&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Enterprise%20Lakehouse%20Architecture%20•%20PySpark%20•%20SQL%20•%20AI%20Analytics&descAlignY=60&descSize=18"/>
+
+### 🚀 End-to-End Modern Data Engineering Pipeline
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=900&color=F59E0B&center=true&vCenter=true&width=860&lines=Databricks+Lakehouse+Architecture;Bronze+%E2%86%92+Silver+%E2%86%92+Gold+Pipeline;PySpark+%7C+SQL+%7C+Delta+Lake+%7C+Power+BI;Building+Scalable+Enterprise+Data+Workflows"/>
+
+<br/>
+
+![Databricks](https://img.shields.io/badge/DATABRICKS-LAKEHOUSE-EA580C?style=for-the-badge\&logo=databricks\&logoColor=white)
+![Spark](https://img.shields.io/badge/APACHE%20SPARK-DISTRIBUTED-F97316?style=for-the-badge\&logo=apachespark\&logoColor=white)
+![Delta](https://img.shields.io/badge/DELTA-LAKE-0EA5E9?style=for-the-badge)
+![SQL](https://img.shields.io/badge/SQL-ANALYTICS-2563EB?style=for-the-badge)
+![Status](https://img.shields.io/badge/STATUS-ACTIVE-22C55E?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🚀 Project Overview
+# 🌍 Executive Overview
 
-This project simulates a real-world FMCG enterprise where data arrives daily from multiple companies and operational systems. The pipeline ingests raw transactional data, transforms it into validated business datasets, and delivers analytics-ready tables for reporting and AI use cases.
+**Databricks Data + AI Project** is an enterprise-style **Lakehouse Data Engineering** implementation focused on ingesting, transforming, validating and analyzing large-scale datasets using the Medallion Architecture.
 
-The entire workflow is designed around the **Bronze, Silver, and Gold** layered architecture commonly used in modern Data Lakehouses.
+The project demonstrates how raw business data evolves into trusted analytical datasets through **Bronze → Silver → Gold** layers using Databricks, PySpark, SQL and Delta Lake.
+
+### 🎯 Primary Objective
+
+Transform raw enterprise data into **high-quality, analytics-ready business intelligence assets** using scalable distributed processing.
 
 ---
 
-## 🏛️ Lakehouse Architecture
+# ✨ Why This Project?
+
+Modern organizations generate enormous volumes of structured and semi-structured data.
+
+Instead of directly querying raw files, this project follows a **Lakehouse engineering strategy** that separates ingestion, transformation and business analytics into dedicated layers.
+
+### Traditional Data Flow
 
 ```text
-                  FMCG Source Systems
-      (Customers • Products • Orders • Pricing)
+Raw Files → SQL → Reports
+```
+
+### Enterprise Lakehouse Flow
+
+```text
+Raw Data
+    │
+    ▼
+Bronze Layer
+    │
+    ▼
+Silver Layer
+    │
+    ▼
+Gold Layer
+    │
+    ▼
+SQL Warehouse
+    │
+    ▼
+AI / BI Dashboards
+```
+
+This architecture improves scalability, reliability and analytical quality.
+
+---
+
+# 🏗️ Lakehouse Architecture
+
+```text
+                    RAW DATA SOURCES
+        CSV • JSON • APIs • Enterprise Files
                          │
                          ▼
-                🥉 Bronze Layer (Raw)
-          CSV Files • Incremental Loads • Delta
+              🥉 BRONZE LAYER
+        Raw Ingestion • Historical Storage
                          │
-          Data Validation & Standardization
                          ▼
-                🥈 Silver Layer (Clean)
-        Dimension Tables + Fact Tables + Quality
+              🥈 SILVER LAYER
+      Cleaning • Validation • Transformation
                          │
-      Business Logic • Joins • Aggregations
                          ▼
-                🥇 Gold Layer (Analytics)
-      KPI Tables • Dashboards • BI • AI Ready
+               🥇 GOLD LAYER
+     Business KPIs • Aggregations • Analytics
+                         │
+                         ▼
+              SQL WAREHOUSE
+                         │
+                         ▼
+         📊 AI / BI DASHBOARDS
 ```
 
 ---
 
-## ⚙️ Tech Stack
+# ⚙️ Medallion Data Pipeline
 
-| Category     | Technologies                   |
-| ------------ | ------------------------------ |
-| Lakehouse    | Databricks Free Edition        |
-| Processing   | PySpark                        |
-| Storage      | Delta Lake                     |
-| Querying     | SQL                            |
-| Domain       | FMCG Retail                    |
-| Analytics    | Power BI Ready                 |
-| Architecture | Medallion (Bronze/Silver/Gold) |
+| Layer        | Purpose           | Output                 |
+| ------------ | ----------------- | ---------------------- |
+| 🥉 Bronze    | Raw ingestion     | Historical source data |
+| 🥈 Silver    | Clean & validate  | Trusted datasets       |
+| 🥇 Gold      | Business modeling | KPI-ready tables       |
+| 📊 Analytics | SQL & BI          | Executive insights     |
+
+Each layer has a clearly defined engineering responsibility rather than mixing raw and business logic together.
 
 ---
 
-## 📂 Repository Structure
+# 🔄 End-to-End Workflow
 
 ```text
-project-de-fmcg-atlikon/
-│
-├── 0_data/
-│   ├── full_load/
-│   └── incremental_load/
-│
-├── 1_codes/
-│   ├── setup/
-│   ├── dimension_processing/
-│   └── fact_processing/
-│
-├── 2_dashboarding/
-│   ├── dashboard.pdf
-│   └── SQL Queries
-│
-└── resources/
-    ├── architecture.png
-    └── project_diagram
+Enterprise Data Sources
+          │
+          ▼
+   Databricks Ingestion
+          │
+          ▼
+      Bronze Tables
+          │
+          ▼
+   PySpark Processing
+          │
+          ▼
+      Silver Tables
+          │
+          ▼
+ Business Transformations
+          │
+          ▼
+       Gold Models
+          │
+          ▼
+      SQL Analytics
+          │
+          ▼
+   Power BI Dashboard
 ```
 
----
-
-## 🔄 End-to-End Data Pipeline
-
-### Bronze Layer
-
-* Raw CSV ingestion
-* Parent & child company datasets
-* Incremental order loading
-* Data lineage preservation
-
-### Silver Layer
-
-* Customer cleansing
-* Product standardization
-* Pricing transformation
-* Fact & dimension modeling
-
-### Gold Layer
-
-* Business KPIs
-* Sales analytics
-* Reporting datasets
-* AI & dashboard ready tables
+This workflow reflects a production-oriented ELT approach commonly used in enterprise analytics.
 
 ---
 
-## 📊 Business Workflow
+# 📂 Repository Structure
 
-1. Ingest raw FMCG datasets
-2. Create Delta tables
-3. Process dimensions
-4. Build fact tables
-5. Apply incremental loads
-6. Generate analytical datasets
-7. Power BI dashboard consumption
+```text
+databricks-data-ai-project/
+│
+├── notebooks/
+│   ├── bronze/
+│   ├── silver/
+│   └── gold/
+│
+├── datasets/
+├── sql/
+├── dashboards/
+├── docs/
+│
+├── README.md
+└── LICENSE
+```
+
+> Organize notebooks according to Medallion layers for maintainability and reproducibility.
 
 ---
 
-## 💡 Key Engineering Concepts
+# 🛠️ Technology Stack
 
-* Incremental Data Loading
-* Delta Lake Tables
+<div align="center">
+
+| Category        | Technologies           |
+| --------------- | ---------------------- |
+| Lakehouse       | Databricks             |
+| Processing      | Apache Spark • PySpark |
+| Storage         | Delta Lake             |
+| Analytics       | SQL                    |
+| Visualization   | Power BI               |
+| Programming     | Python                 |
+| Version Control | Git & GitHub           |
+
+</div>
+
+---
+
+# 🧠 Core Engineering Features
+
+| Feature          | Description                        |
+| ---------------- | ---------------------------------- |
+| 🥉 Bronze Layer  | Raw enterprise data ingestion      |
+| 🥈 Silver Layer  | Data cleansing & validation        |
+| 🥇 Gold Layer    | Business-ready analytical models   |
+| ⚡ PySpark        | Distributed large-scale processing |
+| 🗃️ Delta Lake   | Reliable Lakehouse storage         |
+| 📊 SQL Analytics | Business intelligence queries      |
+| 📈 Power BI      | Executive dashboard integration    |
+| ☁️ Databricks    | Unified Data + AI platform         |
+
+---
+
+# 🔬 Data Transformation Strategy
+
+The project separates responsibilities into independent transformation stages.
+
+### Bronze
+
+* Raw ingestion
+* Schema preservation
+* Historical storage
+* Immutable source records
+
+### Silver
+
+* Remove duplicates
+* Handle missing values
+* Data validation
+* Standardize schema
+* Quality improvements
+
+### Gold
+
+* KPI generation
+* Business aggregations
+* Dimensional analytics
+* Reporting models
+
+This separation makes debugging and maintenance significantly easier.
+
+---
+
+# 📊 Business Intelligence Layer
+
+After transformation, the Gold layer becomes the source for analytics.
+
+| Business Domain | Example Insight         |
+| --------------- | ----------------------- |
+| Revenue         | Growth trends           |
+| Customers       | Retention analysis      |
+| Products        | Performance ranking     |
+| Orders          | Operational monitoring  |
+| Geography       | Regional insights       |
+| Time            | Monthly & yearly trends |
+
+These analytical tables are optimized for dashboards rather than raw processing.
+
+---
+
+# 🧪 Data Quality Framework
+
+Reliable analytics require validated data.
+
+### Quality Checks
+
+* ✅ Schema validation
+* ✅ Null detection
+* ✅ Duplicate removal
+* ✅ Type consistency
+* ✅ Business rule validation
+* ✅ Data integrity checks
+* ✅ Transformation auditing
+* ✅ Trusted analytical outputs
+
+> **Data Quality → Trusted Data → Better Decisions**
+
+---
+
+# 🚀 Scalability Highlights
+
+The architecture is designed around scalable engineering principles:
+
+| Engineering Goal | Solution                       |
+| ---------------- | ------------------------------ |
+| Large datasets   | Distributed Spark processing   |
+| Reliable storage | Delta Lake                     |
+| Layered modeling | Medallion Architecture         |
+| Fast analytics   | SQL Warehouse                  |
+| BI consumption   | Power BI                       |
+| Future AI        | Databricks Data + AI ecosystem |
+
+---
+
+# 💼 Real-World Applications
+
+This architecture is applicable across multiple industries.
+
+### Retail Analytics
+
+Sales, customers and inventory pipelines.
+
+### Finance
+
+Transaction processing and KPI modeling.
+
+### Healthcare
+
+Patient and operational analytics.
+
+### Logistics
+
+Shipment, warehouse and delivery intelligence.
+
+### Manufacturing
+
+Production monitoring and quality reporting.
+
+### AI & Data Science
+
+Feature-ready datasets for machine learning.
+
+---
+
+# 📈 Project Roadmap
+
+* [x] Lakehouse Architecture
+* [x] Bronze / Silver / Gold Design
+* [x] PySpark Transformations
+* [x] SQL Analytics
+* [x] BI Integration Ready
+* [ ] Streaming Pipelines
+* [ ] Unity Catalog
+* [ ] MLflow Tracking
+* [ ] Auto Loader
+* [ ] Lakeflow Jobs
+* [ ] CI/CD Automation
+* [ ] Data Observability
+
+---
+
+# 🎓 Engineering Concepts Demonstrated
+
 * Medallion Architecture
-* Star Schema Preparation
-* Dimension & Fact Modeling
-* Enterprise Data Lineage
-* Analytics-Ready Lakehouse
+* Lakehouse Design
+* Distributed Computing
+* PySpark Data Processing
+* Delta Lake Storage
+* SQL Analytics
+* Data Validation
+* Business Intelligence Modeling
+* Enterprise ETL / ELT Thinking
 
 ---
 
-## 📈 Learning Outcomes
+# 👨‍💻 Author
 
-* Enterprise Data Engineering workflow
-* Databricks notebook development
-* PySpark transformation pipeline
-* Delta Lake implementation
-* Bronze → Silver → Gold architecture
-* Real-world FMCG analytics project
+<div align="center">
+
+## Syed Saud Alam
+
+**Data Engineer • AI Engineer • Big Data • Cloud**
+
+[![GitHub](https://img.shields.io/badge/GitHub-syedsaud15-181717?style=for-the-badge\&logo=github)](https://github.com/syedsaud15)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Syed%20Saud%20Alam-0A66C2?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/syed-saud-dev/)
+
+</div>
 
 ---
 
-## 👨‍💻 Author
+<div align="center">
 
-**Syed Saud Alam**
+## ⚡ Engineering the Future with Data + AI
 
-*Data Engineering • Databricks • PySpark • Lakehouse Architecture*
+**From Raw Data to Intelligent Business Decisions**
+
+⭐ **Star this repository if you found it valuable.**
+
+</div>
